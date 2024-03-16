@@ -8,15 +8,20 @@ int main(){
   char atr[100];
   fgets(atr,100,stdin);
 
-for(int i=0 , j=0; str[i] != '\0' && atr[i] != '\0'; i++,j++){
-  if(str[i] > atr[i]){
-    printf("%c",str[i]);
+    int comparison_result = strcmp(str, atr);
+
+// for(int i=0 , j=0; str[i] != '\0' && atr[i] != '\0'; i++,j++){
+  if(comparison_result == 1){
+    puts(str);
   }
-  else if(atr[i] > str[i]){
-    printf("%c",atr[i]);
+  else if(comparison_result == -1){
+    puts(atr);
+  }
+  else{
+    printf("%s%s",str[i],atr[i]);
   }
 
-}
+
 
   return 0;
 }
